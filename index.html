@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Digitale Visitenkarte</title>
+    <meta name="description" content="Digitale Visitenkarte – Kontakt mit einem Tap speichern." />
+    <link rel="icon" href="assets/avatar.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="card">
+        <div class="top">
+          <img class="avatar" src="assets/avatar.svg" alt="Profilbild" />
+          <div class="id">
+            <h1 id="name"></h1>
+            <p class="subtitle" id="subtitle"></p>
+          </div>
+        </div>
+
+        <div class="cta">
+          <a id="downloadBtn" class="btn" href="#" download>vCard herunterladen (.vcf)</a>
+          <button id="addBtn" class="btn secondary">In Kontakte übernehmen</button>
+        </div>
+
+        <div class="grid">
+          <a class="tile" id="telLink" href="#">
+            <span class="label">Telefon</span>
+            <span class="value" id="telValue"></span>
+          </a>
+          <a class="tile" id="mailLink" href="#">
+            <span class="label">E‑Mail</span>
+            <span class="value" id="mailValue"></span>
+          </a>
+          <a class="tile" id="webLink" href="#" target="_blank" rel="noopener">
+            <span class="label">Web</span>
+            <span class="value" id="webValue"></span>
+          </a>
+          <a class="tile" id="liLink" href="#" target="_blank" rel="noopener">
+            <span class="label">LinkedIn</span>
+            <span class="value" id="liValue"></span>
+          </a>
+          <div class="tile qr">
+            <span class="label">QR‑Code</span>
+            <img id="qrImg" class="qrcode" src="assets/qr_visitenkarte_512.png" alt="QR-Code" width="160" height="160" />
+            <small>Scannen, um diese Seite zu öffnen</small>
+          </div>
+        </div>
+
+        <footer class="foot">
+          <small>© <span id="year"></span> <span id="owner"></span> · Digitale Visitenkarte</small>
+        </footer>
+      </section>
+    </main>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
