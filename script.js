@@ -7,15 +7,21 @@
   $('name').textContent = fullName;
   $('subtitle').textContent = (C.jobTitle + ' · ' + C.organization).trim();
 
+  // Links & Werte
   $('telLink').href = 'tel:' + C.phone.replace(/\s+/g,'');
   $('telValue').textContent = C.phone;
   $('mailLink').href = 'mailto:' + C.email;
   $('mailValue').textContent = C.email;
   $('webLink').href = C.website;
   $('webValue').textContent = C.website.replace(/^https?:\/\//,'');
-  $('liLink').href = C.linkedin || '#';
+  $('liLink').href = C.linkedin;
   $('liValue').textContent = C.linkedin ? (C.linkedin.split('/').pop() || 'LinkedIn') : '—';
 
+  // QR statisch aus asset; wenn Ziel-URL abweicht, einfach assets/qr ersetzen
+  // Zusätzlich, wenn du live eine andere Ziel-URL willst, kannst du hier zur Not das src dynamisch setzen:
+  // document.getElementById('qrImg').src = 'assets/qr_visitenkarte_512.png';
+
+  // vCard aus denselben Daten generieren (UTF-8)
   function escapeV(s){ return String(s||'').replace(/,/g,'\\,').replace(/;/g,'\\;').replace(/\n/g,'\\n'); }
   function buildVCard(){
     const now = new Date().toISOString().replace(/\.\d{3}Z$/,'Z');
@@ -49,6 +55,7 @@
     download(fullName.replace(/\s+/g,'_') + '.vcf', buildVCard());
   });
   document.getElementById('addBtn').addEventListener('click', function(){
+    // auf Mobilgeräten oft direkt in Kontakte
     download(fullName.replace(/\s+/g,'_') + '.vcf', buildVCard());
   });
 })();
