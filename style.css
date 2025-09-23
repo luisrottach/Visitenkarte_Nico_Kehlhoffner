@@ -16,7 +16,7 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: var(--bg);
+  background: linear-gradient(180deg, #eef3f7 0%, #f7fafc 100%);
   color: var(--text);
 }
 .wrap{min-height:100%;display:grid;place-items:center;padding:28px 16px}
