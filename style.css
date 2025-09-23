@@ -3,11 +3,12 @@
   --brand-green:#1c7f3b;    /* Rottach Grün */
   --brand-gray:#565a5e;
 
-  /* Professioneller, dezenter Hintergrund passend zum Logo */
+  /* Seitenhintergrund (dezent, professionell) */
   --bg-base: linear-gradient(180deg, #eef3f7 0%, #f7fafc 100%);
   --bg-glow-1: radial-gradient(1200px 700px at -10% -15%, rgba(11,94,139,.12) 0, transparent 60%);
   --bg-glow-2: radial-gradient(1000px 600px at 110% 115%, rgba(28,127,59,.12) 0, transparent 60%);
 
+  /* Karten-/Oberflächenfarben */
   --card:#ffffff;
   --muted:#6b7280;
   --text:#1f2937;
@@ -17,20 +18,18 @@
 *{box-sizing:border-box}
 html,body{height:100%}
 
-/* Basisverlauf liegt auf <html> */
-html{
-  background: var(--bg-base);
-}
+/* Basisverlauf auf der Seite */
+html{ background: var(--bg-base); }
 
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: transparent;          /* Basis kommt von html */
+  background: transparent;          /* Basis kommt von <html> */
   color: var(--text);
-  position: relative;                /* für den Glow-Layer */
+  position: relative;                /* für Glow-Layer */
 }
 
-/* Sanfte Blau-/Grün-Glows als fixer Layer */
+/* Sanfte Blau-/Grün-Glows auf der Seite */
 body::before{
   content:"";
   position: fixed;
@@ -42,18 +41,35 @@ body::before{
 
 .wrap{min-height:100%;display:grid;place-items:center;padding:28px 16px}
 
+/* ===== Karte (das „weiße“ Panel) mit subtiler Brand-Struktur ===== */
 .card{
   width:min(980px,95vw);
-  background:var(--card);
+  background: var(--card);
   border:1px solid var(--border);
   border-radius:22px;
   padding:28px;
   box-shadow: 0 24px 70px rgba(12,41,64,.12);
-  position:relative; overflow:hidden;
+  position:relative;
+  overflow:hidden;
 }
 
+/* dezente Glows NUR innerhalb der Karte */
+.card::before{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  z-index:0;
+  background:
+    radial-gradient(900px 380px at -10% -15%, rgba(11,94,139,.06) 0, transparent 65%),
+    radial-gradient(780px 320px at 110% -10%, rgba(28,127,59,.06) 0, transparent 65%),
+    linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.92) 100%);
+}
+
+/* Inhalte über das Karten-Overlay heben */
+.card > *{ position: relative; z-index:1; }
+
 /* brand stripes */
-.stripes{position:absolute;inset:0 0 auto 0;height:10px;display:grid;grid-template-columns:1fr 1fr}
+.stripes{position:absolute;inset:0 0 auto 0;height:10px;display:grid;grid-template-columns:1fr 1fr; z-index:2;}
 .stripes .blue{background:var(--brand-blue)}
 .stripes .green{background:var(--brand-green)}
 
