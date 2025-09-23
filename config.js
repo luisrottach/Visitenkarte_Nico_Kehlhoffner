@@ -4,7 +4,7 @@ window.CARD_CONFIG = {
   familyName: "Rottach",
   jobTitle: "Geschäftsführer",
   organization: "Rottach Werke Blechverarbeitung",
-  phone: "+49 171 0000000",
+  phone: "+49 160 8849205",
   email: "joern.rottach@rottach.com",
   website: "https://rottach.com",
   street: "Höfen 40",
@@ -13,5 +13,5 @@ window.CARD_CONFIG = {
   country: "Deutschland",
   linkedin: "https://www.linkedin.com/company/rottach-firmengruppe/",
   owner: "Jörn Rottach", // erscheint im Footer
-  qrTarget: "https://rottach.com/visitenkarte" // wohin der QR führt
+  qrTarget: "https://github.com/luisrottach/Visitenkarte" // wohin der QR führt
 };
