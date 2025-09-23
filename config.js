@@ -13,5 +13,5 @@ window.CARD_CONFIG = {
   country: "Deutschland",
   linkedin: "https://www.linkedin.com/company/rottach-firmengruppe/",
   owner: "Jörn Rottach", // erscheint im Footer
-  qrTarget: "https://github.com/luisrottach/Visitenkarte/" // wohin der QR führt
+  qrTarget: "https://github.com/luisrottach.github.io/Visitenkarte/" // wohin der QR führt
 };
