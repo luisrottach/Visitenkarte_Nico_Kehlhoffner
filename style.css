@@ -3,9 +3,9 @@
   --brand-green:#1c7f3b;
   --brand-gray:#565a5e;
 
-  --bg: radial-gradient(900px 500px at -10% -20%, rgba(11,94,139,.12), transparent 60%),
-        radial-gradient(900px 500px at 110% 120%, rgba(28,127,59,.12), transparent 60%),
-        linear-gradient(180deg, #eef3f7, #f7fafc);
+  --bg: radial-gradient(1200px 700px at -10% -15%, rgba(11,94,139,.12), transparent 60%),
+        radial-gradient(1000px 600px at 110% 115%, rgba(28,127,59,.12), transparent 60%),
+        linear-gradient(180deg, #eef3f7 0%, #f7fafc 100%);
   --card:#ffffff;
   --muted:#6b7280;
   --text:#1f2937;
