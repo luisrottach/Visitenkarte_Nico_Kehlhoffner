@@ -1,11 +1,11 @@
 // Alle Daten an einer Stelle – dient als einzige Quelle für Anzeige & vCard
 window.CARD_CONFIG = {
-  givenName: "Jörn",
-  familyName: "Rottach",
-  jobTitle: "Geschäftsführer",
+  givenName: "Nico",
+  familyName: "Kehlhoffner",
+  jobTitle: "IT-Administrator + Konstruktion",
   organization: "Rottach Werke Blechverarbeitung",
-  phone: "+49 8386 933653",
-  email: "joern.rottach@rottach.com",
+  phone: "+49 8386 933625",
+  email: "nico.kehlhoffner@rottach.com",
   website: "https://rottach.com",
   street: "Höfen 20",
   postalCode: "87534",
@@ -13,5 +13,5 @@ window.CARD_CONFIG = {
   country: "Deutschland",
   linkedin: "https://www.linkedin.com/company/rottach-firmengruppe/",
   owner: "Jörn Rottach", // erscheint im Footer
-  qrTarget: "https://luisrottach.github.io/Visitenkarte_Joern_Rottach/" // wohin der QR führt
+  qrTarget: "https://luisrottach.github.io/Visitenkarte_Nico_Kehlhoffner/" // wohin der QR führt
 };
